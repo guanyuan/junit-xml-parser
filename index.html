@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>JUnit test results</title>
+    <script src="junit-viewer-bundle.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #results {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="results"></iframe>
+    <script>
+        try {
+            var xmlResults = "<!--XMLString-->";
+            var parsedResults = JUnitViewer.parseXML(xmlResults);
+            var renderedData = JUnitViewer.render(parsedResults);
+            document.getElementById('results').contentWindow.document.write(renderedData);
+        } catch (e) {
+            alert('Error: ' + e.toString() + ' - ' + e.stack);
+        }
+    </script>
+</body>
+
+</html>

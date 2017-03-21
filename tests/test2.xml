@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
    <testsuites id="abcefgs" name="New_configuration (14/06/12 17:05:19)" tests="225" failures="1262" time="0.001">
       <testsuite id="codereview.cobol.analysisProvider" name="COBOL Code Review" tests="45" failures="17" time="0.001">
-         <testcase id="codereview.cobol.rules.ProgramIdRule" name="Use a program name that matches the source file name" time="0.001">
+         <testcase id="codereview.cobol.rules.ProgramIdRule2" name="Use a program name that matches the source file name" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "junit-viewer": "^4.11.0"
+    "junit-merge": "^1.1.0",
+    "junit-report-merger": "0.0.4",
+    "junit-viewer": "^4.11.0",
+    "recursive-readdir": "^2.1.1"
   }
 }

@@ -2,6 +2,7 @@ var http = require('http')
 var fs = require('fs')
 var AdmZip = require('adm-zip')
 var mkdirp = require('mkdirp');
+var jv = require('junit-viewer/src/main.js')
 
 
 var dir = "./assets/downloads";
@@ -30,5 +31,8 @@ http.get(url, function(response) {
     var zip = new AdmZip(tmpFilePath)
     zip.extractAllTo("assets/extracted/" + filename)
     fs.unlink(tmpFilePath)
+
+    var parsedAndRenderedData = jv.junit_viewer("assets/extracted/")
+    fs.writeFile('hello.html', parsedAndRenderedData)
   })
 });

@@ -1,3 +1,4 @@
+//the data after parse: var data = parse(resultsFile,contracted)
 var junit_info = {
   "suites": {
     "count": 2, "passed": 1, "failure": 1

@@ -24,15 +24,20 @@ if (!fs.existsSync(dir)){
 
 
 http.get(url, function(response) {
-  response.on('data', function (data) {
-    fs.appendFileSync(tmpFilePath, data)
-  });
-  response.on('end', function() {
-    var zip = new AdmZip(tmpFilePath)
-    zip.extractAllTo("assets/extracted/" + filename)
-    fs.unlink(tmpFilePath)
+  if(response.statusCode !== 200) {
+    console.log('error')
+  } else {
+    response.on('data', function (data) {
+      fs.appendFileSync(tmpFilePath, data)
+    });
+    response.on('end', function() {
+      var zip = new AdmZip(tmpFilePath)
+      zip.extractAllTo("assets/extracted/" + filename)
+      //fs.unlink(tmpFilePath)
 
-    var parsedAndRenderedData = jv.junit_viewer("assets/extracted/")
-    fs.writeFile('hello.html', parsedAndRenderedData)
-  })
+      var parsedAndRenderedData = jv.junit_viewer("assets/extracted/")
+      fs.writeFile('hello.html', parsedAndRenderedData)
+    })
+  }
+
 });

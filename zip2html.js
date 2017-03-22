@@ -6,7 +6,7 @@ var jv = require('junit-viewer/src/main.js')
 
 var dir = "./assets/downloads";
 var filename = 'output'
-var url = 'http://localhost:8080/homework.zip'
+var url = 'http://localhost:8080/Archive.zip'
 var tmpFilePath =  dir + filename + ".zip"
 
 
@@ -27,9 +27,9 @@ http.get(url, function(response) {
       } catch(e) {
         console.log('Exception: ' + e)
       }
-      //fs.unlink(tmpFilePath)
+      fs.unlink(tmpFilePath)
 
-      var parsedAndRenderedData = jv.junit_viewer("assets/extracted/")
+      var parsedAndRenderedData = jv.junit_viewer("assets/extracted/", true)
       fs.writeFile('hello.html', parsedAndRenderedData)
     })
   }

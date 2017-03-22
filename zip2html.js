@@ -29,7 +29,7 @@ http.get(url, function(response) {
       }
       fs.unlink(tmpFilePath)
 
-      var parsedAndRenderedData = jv.junit_viewer("assets/extracted/", true)
+      var parsedAndRenderedData = jv.junit_viewer("assets/extracted/", 'contracted')
       fs.writeFile('hello.html', parsedAndRenderedData)
     })
   }

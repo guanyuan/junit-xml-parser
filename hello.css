@@ -1,0 +1,23 @@
+body {
+    width: 300px;
+}
+
+#suites_container {
+    width: 300px;
+    margin-right: 80px;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    text-transform: none;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-size: 12px;
+}
+
+#options_container {
+    display: none;
+}
+
+.junit_info:first-child {
+    margin-top: 20px;
+}

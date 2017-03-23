@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "adm-zip": "^0.4.7",
+    "express": "^4.15.2",
     "mkdirp": "^0.5.1",
-    "node-static": "^0.7.9"
+    "node-static": "^0.7.9",
+    "path": "^0.12.7"
   }
 }
